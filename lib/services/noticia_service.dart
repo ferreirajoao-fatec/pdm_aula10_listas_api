@@ -3,10 +3,12 @@ import 'package:http/http.dart' as http;
 import '../models/noticia_model.dart';
 
 class NoticiaService {
-  static const String endpointValido = 'https://jsonplaceholder.typicode.com/posts';
+  // Feed de notícias em JSON hospedado no próprio repositório (pasta api/)
+  static const String endpointValido =
+      'https://raw.githubusercontent.com/ferreirajoao-fatec/pdm_aula10_listas_api/main/api/noticias.json';
 
   // Desafio Avançado: endereço inexistente usado para simular erro de conexão
-  static const String endpointInvalido = 'https://endereco-invalido.jsonplaceholder.typicode.invalid/posts';
+  static const String endpointInvalido = 'https://endereco-invalido.noticias.invalid/noticias.json';
 
   String _endpoint = endpointValido;
 
